@@ -1,0 +1,25 @@
+{
+  "name": "chainsql-api-node",
+  "version": "0.1.0",
+  "description": "Apisever for chainsql with node",
+  "dependencies": {
+    "bignumber.js": "^2.4.0",
+    "chainsql": "^0.6.20",
+    "chainsql-lib": "^0.17.43",
+    "co": "^4.6.0",
+    "elliptic": "^5.1.0",
+    "express": "^4.16.4",
+    "hash.js": "^1.0.3",
+    "lodash": "^4.14.1",
+    "log4js": "^4.0.2",
+    "protobufjs": "^6.8.0",
+    "sjcl": "~1.0.3",
+    "ws": "^2.2.2"
+  },
+  "keywords": [
+    "chainsql",
+    "apiserver",
+    "node"
+  ],
+  "author": "zhaojian"
+}
