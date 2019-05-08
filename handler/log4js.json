@@ -18,14 +18,15 @@
         "error": {
           "type": "file",
           "filename": "../logs/error.log",
-          "level": "error",
+          "level": "ERROR",
           "maxLogSize": 1000000,
           "backups":2
         },
         "default": {
           "type": "dateFile",
           "filename": "../logs/default",
-          "pattern": "-dd.log",
+          "pattern": "-MM-dd.log",
+          "level": "trace",
           "alwaysIncludePattern": true
         },
         "rate": {
@@ -37,7 +38,7 @@
     },
   "replaceConsole": true,
   "categories": {
-    "default": { "appenders": ["out","default","error"], "level": "trace"},
+    "default": { "appenders": ["out","default","error"], "level": "ALL"},
     "task": { "appenders": ["task"], "level": "info"},
     "result": { "appenders": ["result"], "level": "trace" },
     "error": { "appenders": ["error"], "level": "error" },

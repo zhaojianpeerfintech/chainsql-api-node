@@ -30,13 +30,18 @@ exports.payToken =(req, res)=>{
     let info = yield apiBasic.getSequence(address);
     // console.log("sequence：" + c.api.getAccountInfo(address).sequence)
     console.log("accountInfo"+JSON.stringify(info));
-    tx_json.Sequence = info.account_data.Sequence;
+    // tx_json.Sequence = info.account_data.Sequence;
     tx_json.Destination = dest;
     tx_json.Amount.value = value;
     console.log(tx_json);
     let signedRet = c.sign(tx_json,secret);
     console.log(signedRet);
-    c.api.submit(signedRet.signedTransaction).then(function(data){
+    // c.api.connection.request({
+    //     command: "submit",
+    //     tx_blob: signedRet.signedTransaction
+    // })
+    c.api.submit(signedRet.signedTransaction)
+    .then(function(data){
         console.log(data);
         res.json(data);
     }).catch(err=>{
